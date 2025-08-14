@@ -28,5 +28,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - run: docker compose -f docker-compose.yml --project-name ${{ secrets.STACK_NAME_STAGING }} build
-      - run: docker compose -f docker-compose.yml --project-name ${{ secrets.STACK_NAME_STAGING }} up --detach
+      # - run: docker compose -f docker-compose.yml --project-name ${{ secrets.STACK_NAME_STAGING }} build
+      # - run: docker compose -f docker-compose.yml --project-name ${{ secrets.STACK_NAME_STAGING }} up --detach
+      - run: docker compose -f docker-compose.yml --project-name full-stack-fastapi-project build
+      - run: docker compose -f docker-compose.yml --project-name full-stack-fastapi-project up --detach
